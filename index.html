@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="app">
+      <form class="form">
+        <h3>Beneficios con Daily</h3>
+        <div v-if="isCalculated">
+          <h3>${{totalRewards}}</h3>
+          <button v-on:click="cleanRewards">Volver a calcular</button>
+        </div>
+        <div v-if="!isCalculated">
+          <div>
+            <input placeholder="Valor inicial" v-model="initValue">
+          </div>
+          <div>
+            <input placeholder="Numero de meses" v-model="numberOfMonths">
+          </div>
+          <div>
+            <input placeholder="Adicion mensual" v-model="monthlyAddiciton">
+          </div>
+          <button v-on:click="calculateRewards">Calcular</button>
+        </div>
+      </form>
+    </div>
+  <script   src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+.form{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  margin: 30px auto;
+  background: white;
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 8%);
+}
+
+.form div div{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form div div input{
+  border-radius: 5px;
+  margin: 10px 0px 10px 0px;
+  padding: 20px 10px;
+  font-size: 15px;
+  color: #0791e6;
+  background: white;
+  border: 1px solid #0791e6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form div button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background: #0791e6;;
+  border: 0px;
+}
+
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575px) {
+  .form {
+    width: 90%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .form {
+    width: 50%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .form {
+    width: 40%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1999px) {
+  .form {
+    width: 30%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 1200px) {
+  .containerLogin {
+    width: 25%;
+  }
+}
