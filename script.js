@@ -4,6 +4,7 @@ var app = new Vue({
     initValue: "",
     numberOfMonths: "",
     monthlyAddiciton: "",
+    interests: "",
     isCalculated: false,
     totalRewards: 0
   },
@@ -11,8 +12,9 @@ var app = new Vue({
     calculateRewards: function (e) {
       e.preventDefault();
       let tempTotal = parseInt(this.initValue, 10);
+      let interest = parseInt(this.interests, 10) / 100;
       for(let i=0; i<parseInt(this.numberOfMonths, 10) * 20; i++) {
-        tempTotal = tempTotal + (tempTotal * 0.007);
+        tempTotal = tempTotal + (tempTotal * interest);
         if ((i + 1) % 20 == 0) {
           tempTotal = tempTotal + parseInt(this.monthlyAddiciton, 10);
         }
@@ -26,6 +28,7 @@ var app = new Vue({
       this.initValue = "";
       this.numberOfMonths = "";
       this.monthlyAddiciton = "";
+      this.interests = "";
       this.isCalculated = false;
       this.totalRewards = 0;
     }
