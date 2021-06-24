@@ -12,7 +12,7 @@ var app = new Vue({
     calculateRewards: function (e) {
       e.preventDefault();
       let tempTotal = parseInt(this.initValue, 10);
-      let tempInterests = parseInt(this.interests, 10);
+      let tempInterests = parseFloat(this.interests);
       for(let i=0; i<parseInt(this.numberOfMonths, 10) * 20; i++) {
         tempTotal = tempTotal + (tempTotal * tempInterests * 0.1);
         if ((i + 1) % 20 == 0) {
