@@ -14,7 +14,7 @@ var app = new Vue({
       let tempTotal = parseInt(this.initValue, 10);
       let tempInterests = parseFloat(this.interests);
       for(let i=0; i<parseInt(this.numberOfMonths, 10) * 20; i++) {
-        tempTotal = tempTotal + (tempTotal * tempInterests * 0.1);
+        tempTotal = tempTotal + (tempTotal * 0.007);
         if ((i + 1) % 20 == 0) {
           tempTotal = tempTotal + parseInt(this.monthlyAddiciton, 10);
         }
